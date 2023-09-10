@@ -43,6 +43,7 @@ button {
   padding-left: 2rem;
 }
 
-.birdhouse-svg {
+.birdhouse-svg,
+.notification-svg {
   overflow: visible;
 }
