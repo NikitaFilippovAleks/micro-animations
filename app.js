@@ -1,5 +1,5 @@
 const tl = gsap.timeline({
-  defaults: { duration: 0.35, ease: 'Power2.easeOut' }
+  defaults: { duration: .5, ease: 'Power2.easeOut' }
 });
 
 const houseTl = gsap.timeline({
@@ -8,8 +8,8 @@ const houseTl = gsap.timeline({
   }
 });
 
+// Home
 const home = document.querySelector('.home');
-const notification = document.querySelector('.notification');
 
 gsap.set('.feather', { scale: 0, transformOrigin: 'center' })
 home.addEventListener('click', () => {
@@ -23,6 +23,9 @@ home.addEventListener('click', () => {
   houseTl.fromTo('#Feather_3', { opacity: 1 }, { opacity: 0 }, '<')
 })
 
+// Notification
+const notification = document.querySelector('.notification');
+
 gsap.set('#Bell', { transformOrigin: 'top center' } )
 gsap.set('#Tongue', { transformOrigin: 'top center' } )
 gsap.set('#Sound', { opacity: 0, transformOrigin: 'bottom' } )
@@ -30,4 +33,16 @@ notification.addEventListener('click', () => {
   gsap.fromTo('#Bell', { rotation: -5 }, { rotation: 0, duration: 2, ease: "elastic.out(5, 0.2)" })
   gsap.fromTo('#Tongue', { rotation: -5, x: 0.5 }, { rotation: 0, x: 0, duration: 2, ease: "elastic.out(5, 0.2)" })
   gsap.fromTo('#Sound', { opacity: 1, scale: 0.6 }, { opacity: 0, scale: 1.3, duration: 1 })
+})
+
+// Message
+const message = document.querySelector('.message');
+
+gsap.set('#Message_head', { transformOrigin: 'top' })
+message.addEventListener('click', () => {
+  tl.fromTo('.message-svg', { scale: 1 }, { scale: 0.9 })
+  tl.fromTo('#Message_head', { scale: 1 }, { scale: -1 }, '<50%')
+  tl.fromTo('.message-svg', { scale: 0.9 }, { scale: 1 }, '<50%')
+  tl.fromTo('#Message_message', { y: 0, opacity: 1 }, { y: -40, opacity: 0, duration: 0.75 })
+  tl.to('#Message_head', { scale: 1 }, '<75%')
 })

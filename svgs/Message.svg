@@ -1,0 +1,13 @@
+<svg width="32" height="21" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Message" clip-path="url(#clip0_120_82)">
+<rect id="Background" width="32" height="21" fill="#575757"/>
+<path id="Message_head" d="M-1 -1L16 13L33 -1H-1Z" fill="black" stroke="white"/>
+<rect id="Message_message" x="6" y="15" width="20" height="4" fill="#3490FB"/>
+<path id="Message_body" d="M16 13.3827L0 0.416016V21H32V0.416016L16 13.3827Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_120_82">
+<rect width="32" height="21" fill="white"/>
+</clipPath>
+</defs>
+</svg>

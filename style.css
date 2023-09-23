@@ -44,6 +44,7 @@ button {
 }
 
 .birdhouse-svg,
-.notification-svg {
+.notification-svg,
+.message-svg {
   overflow: visible;
 }
